@@ -7,9 +7,12 @@
     <title>{{ title }}</title>
 </head>
 <body>
-<a href="../dict/1/">{{ title }}</a>
-<a href="../dict/2/">{{ title }}</a>
-{#<a href="../dict/dicts.html">{{ title }}</a>#}
+<h1>{{ title }}</h1>
+{% for item in dicts %}
+    <div>
+        <p>{{ item.name }}</p>
+        <p>{{ item.date_created|date:'Y-m-d H:i'}}</p>
+    </div>
+{% endfor %}
 </body>
-
 </html>

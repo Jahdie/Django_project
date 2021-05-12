@@ -19,5 +19,9 @@ from dict.views import *
 
 urlpatterns = [
     path('', index),
-    path('upload', upload),
+    path('upload/', upload),
+    path('dict/<int:dict_number>/', getListDictionary),
+    # path('dict/dicts.html', getListDictionaryControllerFamilies),
+    # path('dict/dicts.html', getListDictionaryLocations),
+
 ]
