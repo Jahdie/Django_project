@@ -21,6 +21,7 @@ urlpatterns = [
     path('', index),
     path('upload/', upload),
     path('dict/<int:dict_number>/', getListDictionary),
+    path('dict/<int:dict_number>/<int:dict_number_number>/', getListRelatedDictionary)
     # path('dict/dicts.html', getListDictionaryControllerFamilies),
     # path('dict/dicts.html', getListDictionaryLocations),
 

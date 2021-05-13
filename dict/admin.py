@@ -36,12 +36,13 @@ class SwitchCabinetsAdmin(admin.ModelAdmin):
     getWorkshopsName.short_description = 'Цех'
     getCompartmentsName.short_description = 'Участок'
 
-    list_display = ('pk', 'number_switch_cabinets', 'getProductionsName', 'getWorkshopsName', 'getCompartmentsName')
+    list_display = ('pk', 'name_switch_cabinets', 'getProductionsName', 'getWorkshopsName', 'getCompartmentsName')
     # list_filter = ('production_id', 'workshop_id', 'compartment_id')
 
 
 admin.site.register(Locations, LocationsAdmin)
 admin.site.register(SwitchCabinets, SwitchCabinetsAdmin)
+admin.site.register(Stations)
 admin.site.register(ControllerFamilies)
 admin.site.register(Compartments)
 admin.site.register(Productions)

@@ -6,7 +6,8 @@ class Locations(models.Model):
     date_created_location = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     date_deleted_location = models.DateTimeField(auto_now=True, verbose_name='Дата удаления')
     date_updated_location = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
-    production_id = models.ForeignKey('Productions', on_delete=models.PROTECT, null=True, verbose_name='Производство', related_name='Productions')
+    production_id = models.ForeignKey('Productions', on_delete=models.PROTECT, null=True, verbose_name='Производство',
+                                      related_name='Productions')
     workshop_id = models.ForeignKey('Workshops', on_delete=models.PROTECT, null=True, verbose_name='Цех')
     compartment_id = models.ForeignKey('Compartments', on_delete=models.PROTECT, null=True, verbose_name='Участок')
     photo_location = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
@@ -81,7 +82,7 @@ class ControllerFamilies(models.Model):
 
 
 class SwitchCabinets(models.Model):
-    number_switch_cabinets = models.CharField(max_length=150, verbose_name='Номер шкафа')
+    name_switch_cabinets = models.CharField(max_length=150, verbose_name='Номер шкафа')
     note_switch_cabinets = models.TextField(blank=True, verbose_name='Примечание')
     date_created_switch_cabinets = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     date_deleted_switch_cabinets = models.DateTimeField(auto_now=True, verbose_name='Дата удаления')
@@ -93,3 +94,22 @@ class SwitchCabinets(models.Model):
     class Meta:
         verbose_name = 'Коммутационный шкаф'
         verbose_name_plural = 'Коммутационные шкафы'
+
+
+class Stations(models.Model):
+    name_stations = models.CharField(max_length=150, verbose_name='Номер шкафа')
+    ip_adress_stations = models.CharField(max_length=150, verbose_name='IP адресс')
+    note_stations = models.TextField(blank=True, verbose_name='Примечание')
+    date_created_stations = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+    date_deleted_stations = models.DateTimeField(auto_now=True, verbose_name='Дата удаления')
+    date_updated_stations = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
+    photo_stations = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    location_id = models.ForeignKey('Locations', on_delete=models.PROTECT, null=True,
+                                    verbose_name='Шкафы AC-станций')
+
+    class Meta:
+        verbose_name = 'Шкаф AC-station'
+        verbose_name_plural = 'Шкафы AC-station'
+
+    def __str__(self):
+        return self.name_stations
