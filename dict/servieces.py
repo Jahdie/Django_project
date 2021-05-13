@@ -2,31 +2,31 @@ from dict.models import *
 
 
 def uploadWorkshops():
-    Workshops.objects.create(name='ДЦ', note='!!!!')
-    Workshops.objects.create(name='ИФЦ', note='!!!!')
-    Workshops.objects.create(name='КД', note='!!!!')
-    Workshops.objects.create(name='Курьер', note='!!!!')
+    Workshops.objects.create(name_workshops='ДЦ', note_workshops='!!!!')
+    Workshops.objects.create(name_workshops='ИФЦ', note_workshops='!!!!')
+    Workshops.objects.create(name_workshops='КД', note_workshops='!!!!')
+    Workshops.objects.create(name_workshops='Курьер', note_workshops='!!!!')
 
 
 def uploadCompartments():
-    Compartments.objects.create(name='ПСУ_1F', note='!!!!')
-    Compartments.objects.create(name='ОФ_1сек', note='!!!!')
-    Compartments.objects.create(name='Комплекс_Nelson4', note='!!!!')
-    Compartments.objects.create(name='Комплекс_Nelson2', note='!!!!')
+    Compartments.objects.create(name_compartments='ПСУ_1F', note_compartments='!!!!')
+    Compartments.objects.create(name_compartments='ОФ_1сек', note_compartments='!!!!')
+    Compartments.objects.create(name_compartments='Комплекс_Nelson4', note_compartments='!!!!')
+    Compartments.objects.create(name_compartments='Комплекс_Nelson2', note_compartments='!!!!')
 
 
 def uploadProductions():
-    Productions.objects.create(name='НОФ', note='!!!!')
-    Productions.objects.create(name='УФМК', note='!!!!')
-    Productions.objects.create(name='ЦГТС', note='!!!!')
-    Productions.objects.create(name='Лебяжье', note='!!!!')
+    Productions.objects.create(name_productions='НОФ', note_productions='!!!!')
+    Productions.objects.create(name_productions='УФМК', note_productions='!!!!')
+    Productions.objects.create(name_productions='ЦГТС', note_productions='!!!!')
+    Productions.objects.create(name_productions='Лебяжье', note_productions='!!!!')
 
 
 def uploadController_families():
-    Controller_families.objects.create(name='90-30', note='!!!!')
-    Controller_families.objects.create(name='RX7', note='!!!!')
-    Controller_families.objects.create(name='Genius', note='!!!!')
-    Controller_families.objects.create(name='90-70', note='!!!!')
+    ControllerFamilies.objects.create(name_controller_families='90-30', note_controller_families='!!!!')
+    ControllerFamilies.objects.create(name_controller_families='RX7', note_controller_families='!!!!')
+    ControllerFamilies.objects.create(name_controller_families='Genius', note_controller_families='!!!!')
+    ControllerFamilies.objects.create(name_controller_families='90-70', note_controller_families='!!!!')
 
 
 def getModelByNumber(dict_number):

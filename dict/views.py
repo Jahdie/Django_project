@@ -7,10 +7,10 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     print(dir(request))
-    # uploadWorkshops()
-    # uploadCompartments()
-    # uploadController_families()
-    # uploadProductions()
+    uploadWorkshops()
+    uploadCompartments()
+    uploadController_families()
+    uploadProductions()
     # dict_compartments = Compartments.objects.all()
     # return render(request, 'dict/index.html', {'dicts': dict_workshops, 'title': 'Список'})
     return render(request, 'dict/index.html', {'title': 'список словарей'})
