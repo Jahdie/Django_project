@@ -18,10 +18,10 @@ from django.urls import path
 from dict.views import *
 
 urlpatterns = [
-    path('', index),
+    path('', getContentFromFile()),
     path('upload/', upload),
     path('dict/<int:dict_number>/', getListDictionary),
-    path('dict/<int:dict_number>/<int:dict_number_number>/', getListRelatedDictionary)
+    # path('dict/<int:dict_number>/<int:related_dict_number>/', getListRelatedDictionary)
     # path('dict/dicts.html', getListDictionaryControllerFamilies),
     # path('dict/dicts.html', getListDictionaryLocations),
 

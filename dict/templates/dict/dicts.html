@@ -60,13 +60,14 @@
         {#            <th scope="row">{{ item.0 }}</th>#}
         {#            <td>{{ item.1 }}</td>#}
         {#            <td>{{ item.3|date:'Y-m-d H:i:s' }}</td>#}
-        {#            <td>{{ item.2 }}</td>#}
+        {#            <td>{{ item. }}</td>#}
         {#        </tr>#}
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">{{ item.1 }}</h5>
-                <p class="card-text">{{ item.2 }}</p>
-                <a href="../1/1/" class="btn btn-primary">Перейти к участкам</a>
+                <h5 class="card-title">{{ item.0.1 }}</h5>
+                <p class="card-text">{{ item.0.2 }}</p>
+{#                <a href="../{{ item.1.0 }}/" class="btn btn-primary">Перейти на уровень вверх</a>#}
+                <a href="../{{ item.1.2 }}/?ID={{ item.0.0 }}" class="btn btn-primary">Внутрь</a>
             </div>
         </div>
     {% endfor %}
